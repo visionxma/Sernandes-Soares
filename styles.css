@@ -27,7 +27,7 @@
   --gray-900: #111827;
   
   /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -154,6 +154,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  position: relative;
 }
 
 .nav-logo span {
@@ -162,11 +163,34 @@ body {
   color: var(--primary-red);
 }
 
+.nav-photo {
+  position: absolute;
+  right: var(--spacing-6);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.profile-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-red);
+  transition: all var(--transition-base);
+}
+
+.profile-photo:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
 .nav-menu {
   display: flex;
   list-style: none;
   gap: var(--spacing-8);
   align-items: center;
+  margin-right: 70px; /* Space for profile photo */
 }
 
 .nav-link {
@@ -218,6 +242,7 @@ body {
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
+  margin-right: 70px; /* Space for profile photo */
 }
 
 .hamburger span {
@@ -281,7 +306,7 @@ body {
 
 .hero-title {
   font-size: var(--font-size-5xl);
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: var(--spacing-4);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -345,6 +370,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 56px;
+  font-family: var(--font-family);
 }
 
 .btn-primary:hover {
@@ -439,8 +465,19 @@ body {
 }
 
 .card-icon {
-  font-size: 3rem;
   margin-bottom: var(--spacing-4);
+  color: var(--primary-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon svg {
+  transition: transform var(--transition-base);
+}
+
+.card:hover .card-icon svg {
+  transform: scale(1.1);
 }
 
 .card h3 {
@@ -495,8 +532,19 @@ body {
 }
 
 .feature-icon {
-  font-size: 2.5rem;
   margin-bottom: var(--spacing-3);
+  color: var(--primary-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-icon svg {
+  transition: transform var(--transition-base);
+}
+
+.feature:hover .feature-icon svg {
+  transform: scale(1.1);
 }
 
 .feature h3 {
@@ -540,7 +588,6 @@ body {
 }
 
 .quote-icon {
-  font-size: 3rem;
   color: var(--primary-red);
   opacity: 0.3;
   position: absolute;
@@ -661,6 +708,7 @@ body {
   font-size: var(--font-size-base);
   transition: all var(--transition-base);
   background: var(--white);
+  font-family: var(--font-family);
 }
 
 .form-group input:focus,
@@ -735,8 +783,15 @@ body {
 }
 
 .message-icon {
-  font-size: 3rem;
   margin-bottom: var(--spacing-4);
+  color: var(--primary-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-message .message-icon {
+  color: #10B981;
 }
 
 .form-message h3 {
@@ -770,6 +825,12 @@ body {
 .footer-section p {
   color: var(--gray-300);
   margin-bottom: var(--spacing-2);
+  display: flex;
+  align-items: center;
+}
+
+.footer-section svg {
+  color: var(--primary-red);
 }
 
 .footer-section a {
@@ -801,7 +862,6 @@ body {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  font-size: var(--font-size-xl);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -860,6 +920,7 @@ body {
     padding-top: var(--spacing-8);
     transition: left var(--transition-base);
     box-shadow: var(--shadow-lg);
+    margin-right: 0;
   }
 
   .nav-menu.active {
@@ -868,6 +929,19 @@ body {
 
   .hamburger {
     display: flex;
+  }
+
+  .nav-photo {
+    right: var(--spacing-4);
+  }
+
+  .profile-photo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hamburger {
+    margin-right: 60px;
   }
 
   .hero-title {
@@ -930,6 +1004,19 @@ body {
 
   .simulation-form {
     padding: var(--spacing-4);
+  }
+
+  .nav-photo {
+    right: var(--spacing-3);
+  }
+
+  .profile-photo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .hamburger {
+    margin-right: 50px;
   }
 }
 
