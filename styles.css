@@ -157,32 +157,27 @@ body {
   position: relative;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.honda-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: transform var(--transition-base);
+}
+
+.honda-logo:hover {
+  transform: scale(1.05);
+}
+
 .nav-logo span {
   font-size: var(--font-size-xl);
   font-weight: 700;
   color: var(--primary-red);
-}
-
-.nav-photo {
-  position: absolute;
-  right: var(--spacing-6);
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1001;
-}
-
-.profile-photo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--primary-red);
-  transition: all var(--transition-base);
-}
-
-.profile-photo:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-lg);
 }
 
 .nav-menu {
@@ -190,7 +185,6 @@ body {
   list-style: none;
   gap: var(--spacing-8);
   align-items: center;
-  margin-right: 70px; /* Space for profile photo */
 }
 
 .nav-link {
@@ -242,7 +236,6 @@ body {
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
-  margin-right: 70px; /* Space for profile photo */
 }
 
 .hamburger span {
@@ -708,7 +701,6 @@ body {
   font-size: var(--font-size-base);
   transition: all var(--transition-base);
   background: var(--white);
-  font-family: var(--font-family);
 }
 
 .form-group input:focus,
@@ -766,6 +758,7 @@ body {
   transform: translateY(20px);
   transition: all var(--transition-base);
   display: none;
+  font-family: var(--font-family);
 }
 
 .form-message.show {
@@ -920,7 +913,6 @@ body {
     padding-top: var(--spacing-8);
     transition: left var(--transition-base);
     box-shadow: var(--shadow-lg);
-    margin-right: 0;
   }
 
   .nav-menu.active {
@@ -931,17 +923,8 @@ body {
     display: flex;
   }
 
-  .nav-photo {
-    right: var(--spacing-4);
-  }
-
-  .profile-photo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .hamburger {
-    margin-right: 60px;
+  .honda-logo {
+    height: 35px;
   }
 
   .hero-title {
@@ -987,6 +970,14 @@ body {
     padding: 0 var(--spacing-4);
   }
 
+  .honda-logo {
+    height: 30px;
+  }
+
+  .nav-logo span {
+    font-size: var(--font-size-lg);
+  }
+
   .hero-title {
     font-size: var(--font-size-2xl);
   }
@@ -1004,19 +995,6 @@ body {
 
   .simulation-form {
     padding: var(--spacing-4);
-  }
-
-  .nav-photo {
-    right: var(--spacing-3);
-  }
-
-  .profile-photo {
-    width: 35px;
-    height: 35px;
-  }
-
-  .hamburger {
-    margin-right: 50px;
   }
 }
 
