@@ -5,84 +5,277 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sernandes Soares – Consultor de Consórcio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-spinner"></div>
+    <p>Carregando...</p>
+  </div>
 
-  <!-- Capa / Hero -->
-  <header class="hero">
-    <h1>Sernandes Soares</h1>
-    <p>Consultor de Consórcio Honda Mearim Motos</p>
-    <button id="btn-simulacao">Simule seu consórcio agora</button>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span>Sernandes Soares</span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link">Início</a></li>
+        <li><a href="#tipos" class="nav-link">Consórcios</a></li>
+        <li><a href="#por-que" class="nav-link">Vantagens</a></li>
+        <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+        <li><a href="#simulacao" class="nav-link nav-cta">Simular</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content fade-in">
+      <h1 class="hero-title">Sernandes Soares</h1>
+      <p class="hero-subtitle">Consultor de Consórcio Honda Mearim Motos</p>
+      <p class="hero-description">Realize seu sonho com as melhores condições do mercado</p>
+      <button id="btn-simulacao" class="btn-primary">
+        <span>Simule seu consórcio agora</span>
+        <div class="btn-ripple"></div>
+      </button>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
   </header>
 
   <!-- Tipos de Consórcio -->
-  <section id="tipos">
-    <h2>Tipos de Consórcio</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Consórcio de Motos</h3>
-        <p>Parcelas que cabem no seu bolso, sem consulta ao SPC/Serasa e com a garantia Honda.</p>
-      </div>
-      <div class="card">
-        <h3>Consórcio de Carros</h3>
-        <p>Sem entrada, flexibilidade e qualidade Honda para seu carro.</p>
+  <section id="tipos" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Tipos de Consórcio</h2>
+      <div class="cards">
+        <div class="card fade-in-up" data-delay="100">
+          <div class="card-icon">🏍️</div>
+          <h3>Consórcio de Motos</h3>
+          <p>Parcelas que cabem no seu bolso, sem consulta ao SPC/Serasa e com a garantia Honda.</p>
+          <div class="card-features">
+            <span class="feature-tag">Sem Entrada</span>
+            <span class="feature-tag">Zero Juros</span>
+          </div>
+        </div>
+        <div class="card fade-in-up" data-delay="200">
+          <div class="card-icon">🚗</div>
+          <h3>Consórcio de Carros</h3>
+          <p>Sem entrada, flexibilidade e qualidade Honda para seu carro dos sonhos.</p>
+          <div class="card-features">
+            <span class="feature-tag">Flexível</span>
+            <span class="feature-tag">Garantia Honda</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Por que escolher -->
-  <section id="por-que">
-    <h2>Por que escolher nossos consórcios?</h2>
-    <div class="features">
-      <div class="feature">Zero Juros</div>
-      <div class="feature">Segurança Honda</div>
-      <div class="feature">Parcelas Acessíveis</div>
-      <div class="feature">Sem Consulta ao SPC</div>
-      <div class="feature">Flexibilidade</div>
-      <div class="feature">Atendimento Personalizado</div>
+  <section id="por-que" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Por que escolher nossos consórcios?</h2>
+      <div class="features">
+        <div class="feature fade-in-up" data-delay="0">
+          <div class="feature-icon">💰</div>
+          <h3>Zero Juros</h3>
+          <p>Sem juros abusivos</p>
+        </div>
+        <div class="feature fade-in-up" data-delay="100">
+          <div class="feature-icon">🛡️</div>
+          <h3>Segurança Honda</h3>
+          <p>Marca confiável</p>
+        </div>
+        <div class="feature fade-in-up" data-delay="200">
+          <div class="feature-icon">📊</div>
+          <h3>Parcelas Acessíveis</h3>
+          <p>Cabem no seu orçamento</p>
+        </div>
+        <div class="feature fade-in-up" data-delay="300">
+          <div class="feature-icon">✅</div>
+          <h3>Sem Consulta ao SPC</h3>
+          <p>Aprovação facilitada</p>
+        </div>
+        <div class="feature fade-in-up" data-delay="400">
+          <div class="feature-icon">🔄</div>
+          <h3>Flexibilidade</h3>
+          <p>Condições adaptáveis</p>
+        </div>
+        <div class="feature fade-in-up" data-delay="500">
+          <div class="feature-icon">👨‍💼</div>
+          <h3>Atendimento Personalizado</h3>
+          <p>Suporte especializado</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Depoimentos -->
-  <section id="depoimentos">
-    <h2>O que nossos clientes dizem</h2>
-    <div class="testimonials">
-      <blockquote>“Processo super tranquilo e sem burocracia. Recomendo o trabalho do Sernandes para todos!”<footer>— João Santos, Honda Civic</footer></blockquote>
-      <blockquote>“Excelente profissional! Me ajudou a realizar meu sonho com as melhores condições.”<footer>— Ana Costa, Honda HR‑V</footer></blockquote>
+  <section id="depoimentos" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">O que nossos clientes dizem</h2>
+      <div class="testimonials">
+        <div class="testimonial fade-in-up" data-delay="100">
+          <div class="testimonial-content">
+            <div class="quote-icon">"</div>
+            <p>Processo super tranquilo e sem burocracia. Recomendo o trabalho do Sernandes para todos!</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">JS</div>
+            <div class="author-info">
+              <strong>João Santos</strong>
+              <span>Honda Civic</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial fade-in-up" data-delay="200">
+          <div class="testimonial-content">
+            <div class="quote-icon">"</div>
+            <p>Excelente profissional! Me ajudou a realizar meu sonho com as melhores condições.</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">AC</div>
+            <div class="author-info">
+              <strong>Ana Costa</strong>
+              <span>Honda HR-V</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Confiança e Credibilidade -->
-  <section id="confianca">
-    <h2>Confiança e Credibilidade</h2>
-    <div class="trusts">
-      <div class="trust">Parceiro Oficial Honda</div>
-      <div class="trust">+10 Anos de Experiência</div>
-      <div class="trust">+5000 Clientes Satisfeitos</div>
+  <section id="confianca" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Confiança e Credibilidade</h2>
+      <div class="trusts">
+        <div class="trust fade-in-up" data-delay="0">
+          <div class="trust-number">100%</div>
+          <h3>Parceiro Oficial Honda</h3>
+          <p>Autorização oficial</p>
+        </div>
+        <div class="trust fade-in-up" data-delay="100">
+          <div class="trust-number">10+</div>
+          <h3>Anos de Experiência</h3>
+          <p>Expertise comprovada</p>
+        </div>
+        <div class="trust fade-in-up" data-delay="200">
+          <div class="trust-number">5000+</div>
+          <h3>Clientes Satisfeitos</h3>
+          <p>Sonhos realizados</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Formulário Simulação -->
-  <section id="simulacao">
-    <h2>Simule seu Consórcio</h2>
-    <form id="form-simulacao">
-      <label>Nome completo*<br><input type="text" name="nome" required></label>
-      <label>WhatsApp*<br><input type="tel" name="whatsapp" required></label>
-      <label>Consórcio de Interesse<br>
-        <select name="tipo">
-          <option value="moto">Moto</option>
-          <option value="carro">Carro</option>
-        </select>
-      </label>
-      <button type="submit">Enviar simulação</button>
-    </form>
+  <section id="simulacao" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in-up">Simule seu Consórcio</h2>
+      <div class="form-container fade-in-up">
+        <form id="form-simulacao" class="simulation-form" novalidate>
+          <!-- CSRF Token (would be generated server-side in production) -->
+          <input type="hidden" name="csrf_token" value="dummy_token_for_demo">
+          
+          <div class="form-group">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" required>
+            <div class="error-message" id="nome-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp *</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required>
+            <div class="error-message" id="whatsapp-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+            <div class="error-message" id="email-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="tipo">Consórcio de Interesse *</label>
+            <select id="tipo" name="tipo" required>
+              <option value="">Selecione uma opção</option>
+              <option value="moto">Moto</option>
+              <option value="carro">Carro</option>
+            </select>
+            <div class="error-message" id="tipo-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="valor">Valor desejado (R$)</label>
+            <input type="text" id="valor" name="valor" placeholder="Ex: 25.000">
+            <div class="error-message" id="valor-error"></div>
+          </div>
+
+          <button type="submit" class="btn-primary btn-submit">
+            <span class="btn-text">Enviar simulação</span>
+            <div class="btn-loading">
+              <div class="loading-spinner small"></div>
+            </div>
+            <div class="btn-ripple"></div>
+          </button>
+        </form>
+
+        <!-- Success/Error Messages -->
+        <div id="form-success" class="form-message success-message">
+          <div class="message-icon">✅</div>
+          <h3>Simulação enviada com sucesso!</h3>
+          <p>Entraremos em contato em breve via WhatsApp.</p>
+        </div>
+
+        <div id="form-error" class="form-message error-message">
+          <div class="message-icon">❌</div>
+          <h3>Erro ao enviar simulação</h3>
+          <p>Tente novamente ou entre em contato conosco.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Rodapé -->
-  <footer>
-    <p>© 2025 Sernandes Soares - Consultor de Consórcio Honda</p>
-    <p>Contato: (99) 98244-1144 | <a href="mailto:sernandes@hondamearimmotos.com.br">sernandes@hondamearimmotos.com.br</a></p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sernandes Soares</h3>
+          <p>Consultor de Consórcio Honda especializado em realizar sonhos com as melhores condições do mercado.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p>📞 (99) 98244-1144</p>
+          <p>📧 <a href="mailto:sernandes@hondamearimmotos.com.br">sernandes@hondamearimmotos.com.br</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Horário de Atendimento</h3>
+          <p>Segunda a Sexta: 8h às 18h</p>
+          <p>Sábado: 8h às 12h</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sernandes Soares - Consultor de Consórcio Honda. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    <span>↑</span>
+  </button>
 
   <script src="script.js"></script>
 </body>
