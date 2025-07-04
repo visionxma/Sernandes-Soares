@@ -1,0 +1,25 @@
+{
+  "name": "honda-consortium-website",
+  "version": "1.0.0",
+  "description": "Modern Honda Consortium Website with animations and advanced form functionality",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
+  },
+  "keywords": [
+    "honda",
+    "consortium",
+    "website",
+    "javascript",
+    "css",
+    "html"
+  ],
+  "author": "Sernandes Soares",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "type": "module"
+}
